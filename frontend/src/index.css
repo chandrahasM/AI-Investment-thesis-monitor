@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-stone-800 bg-stone-50 antialiased;
+    font-size: 14px;
+  }
+
+  * {
+    @apply border-stone-200;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-white border border-stone-200 rounded-md;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-stone-500;
+  }
+
+  .mono-tag {
+    @apply inline-flex items-center gap-1 font-mono text-[10.5px] uppercase tracking-[0.1em] border px-2 py-1 rounded-sm leading-none;
+  }
+
+  .chip {
+    @apply mono-tag border-stone-200 bg-stone-50 text-stone-700;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] px-4 py-2.5 rounded-sm border transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-accent {
+    @apply btn bg-amber-50 border-amber-600 text-amber-800 hover:bg-amber-100;
+  }
+
+  .btn-outline {
+    @apply btn bg-white border-stone-300 text-stone-700 hover:bg-stone-100 hover:border-stone-400;
+  }
+
+  .toggle {
+    @apply whitespace-nowrap font-mono text-[10.5px] uppercase tracking-[0.1em] px-2.5 py-1.5 border border-transparent text-stone-500 hover:text-stone-900 rounded-sm transition-colors;
+  }
+
+  .toggle-active {
+    @apply toggle border-amber-600 bg-amber-50 text-amber-800 hover:text-amber-900;
+  }
+
+  .field {
+    @apply w-full px-3 py-2.5 text-sm bg-white border border-stone-300 rounded-sm placeholder-stone-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600/30;
+  }
+
+  .link-accent {
+    @apply font-mono text-[11px] uppercase tracking-[0.12em] text-amber-700 hover:text-amber-900;
+  }
+}
